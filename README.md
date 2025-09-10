@@ -6,7 +6,7 @@ The images for the application are pulled from dockersamples/examplevotingapp.
 Minikube - single node cluster on local machine. Both the control plane and worker components run on same VM or container on local machine.
 Hence,the 'NodePort' is exposed on the Minikube VM's network, not on your host machine's network.
 
-To access the service from your host machine, you need a way to tunnel traffic from your host to the Minikube VM. The 'minikube service <service-name> --url' command handles this for you by automatically creating a tunnel and providing the correct URL.
+To access the service from your host machine, you need a way to tunnel traffic from your host to the Minikube VM. The 'minikube service 'service-name' --url' command handles this for you by automatically creating a tunnel and providing the correct URL.
 
 NodePort Service: A NodePort service in Kubernetes exposes a service on a static port on each node's IP address. In a multi-node cluster, this works because all nodes are on the same network. However, in Minikube's isolated environment, the "node" is the VM or container itself, so its IP address is not directly accessible from your host.
 
